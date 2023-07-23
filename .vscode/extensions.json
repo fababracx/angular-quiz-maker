@@ -1,0 +1,26 @@
+{
+  "recommendations": [
+    // "fabiospampinato.vscode-todo-plus",
+    // "aaron-bond.better-comments",
+    // "oderwat.indent-rainbow",
+    // "vincaslt.highlight-matching-tag",
+    // "wayou.vscode-todo-highlight",
+    // "SirTori.indenticator",
+    // "chakrounanas.turbo-console-log",
+    "angular.ng-template",
+    "angulardoc.angulardoc-vscode",
+    "davidanson.vscode-markdownlint",
+    "eamodio.gitlens",
+    "editorconfig.editorconfig",
+    "eg2.vscode-npm-script",
+    "esbenp.prettier-vscode",
+    "johnpapa.angular2",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "dbaeumer.vscode-eslint",
+    "msjsdiag.debugger-for-chrome",
+    "natewallace.angular2-inline",
+    "nrwl.angular-console",
+    "pkief.material-icon-theme",
+    "lucono.karma-test-explorer"
+  ]
+}

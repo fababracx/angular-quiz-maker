@@ -1,0 +1,12 @@
+<ng-container *ngFor="let answer of answers; index as answerIndex" [formGroup]="answersFormControl">
+  <input
+    type="radio"
+    class="btn-check"
+    id="btn-check-{{parentId}}-{{answerIndex}}"
+    autocomplete="off"
+    [value]="answer"
+    [checked]="answersFormControl.value.selectedAnswer === answer"
+    formControlName="selectedAnswer"
+  />
+  <label class="btn btn-outline-primary" for="btn-check-{{parentId}}-{{answerIndex}}" [innerHtml]="answer"></label>
+</ng-container>

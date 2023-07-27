@@ -1,0 +1,9 @@
+<app-default-page-tpl>
+  <app-page-title pageTitle="Quiz Maker"></app-page-title>
+
+  <div class="col-12">
+    <app-form-quiz-selector (createQuiz)="onCreateQuiz($event)"></app-form-quiz-selector>
+  </div>
+
+  <app-form-list-question [questions]="questions$ | async" (validateQuestions)="onValidateQuestions($event)"></app-form-list-question>
+</app-default-page-tpl>

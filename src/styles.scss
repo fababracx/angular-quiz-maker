@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+input.btn-check + label.btn:hover {
+  color: var(--bs-btn-active-color);
+  background-color: var(--bs-btn-active-bg);
+  border-color: var(--bs-btn-active-border-color);
+}
+
+.input-group > * > .form-control,
+.input-group > * > .form-floating,
+.input-group > * > .form-select {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+}
+
+.input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n + 3) select,
+.input-group:not(.has-validation) > .form-floating:not(:last-child) select > .form-control,
+.input-group:not(.has-validation) > .form-floating:not(:last-child) select > .form-select,
+.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) select {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group
+  > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback)
+  select {
+  margin-left: calc(var(--bs-border-width) * -1);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

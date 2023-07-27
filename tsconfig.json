@@ -3,11 +3,13 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "@app/*": ["src/app/*"],
+      "@quiz/*": ["src/app/domains/quiz/*"],
+      "@question/*": ["src/app/domains/question/*"],
       "@domains/*": ["src/app/domains/*"],
       "@pages/*": ["src/app/pages/*"],
-      "@services/*": ["src/app/services/*"],
       "@shared/*": ["src/app/shared/*"],
+      "@ui/*": ["src/app/ui/*"],
+      "@app/*": ["src/app/*"],
       "@assets/*": ["src/assets/*"],
       "@environments/*": ["src/environments/*"]
     },
@@ -28,10 +30,7 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

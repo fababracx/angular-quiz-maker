@@ -1,0 +1,6 @@
+<div class="col-12 d-flex justify-content-center">
+  <button class="btn btn-block w-50" [ngClass]="additionnalClasses" [id]="btnId" (click)="onClick($event)" type="button">
+    {{ action }}
+  </button>
+  <ng-content></ng-content>
+</div>

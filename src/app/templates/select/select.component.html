@@ -1,0 +1,11 @@
+<select
+  class="form-select"
+  [id]="selectId"
+  [ngModel]="currentValue"
+  (ngModelChange)="onValueChanged($event)"
+  [disabled]="disabled"
+  [attr.aria-label]="selectLabel"
+>
+  <ng-content select="option"></ng-content>
+  <option *ngFor="let option of options" [value]="option.value">{{ option.text | titlecase }}</option>
+</select>

@@ -1,7 +1,10 @@
 # angular-quiz-maker
 
-git branch -M main
-git push -u origin mainThis project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
+[Consignes](https://bit.ly/at-cert-l2-quiz)
+
+---
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
 
 ## Development server
 

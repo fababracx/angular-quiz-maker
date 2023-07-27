@@ -1,10 +1,13 @@
 import { TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { UiModule } from '@ui/ui.module';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [AppComponent]
+      declarations: [AppComponent],
+      imports: [UiModule, RouterTestingModule]
     })
   );
 
@@ -12,18 +15,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as name 'angular-quiz-maker'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.name).toEqual('angular-quiz-maker');
-  });
-
-  it('should render name', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-quiz-maker app is running!');
   });
 });

@@ -1,0 +1,27 @@
+<form *ngIf="questions!.length > 0" [formGroup]="form" (ngSubmit)="onSubmit()" class="mt-3">
+  <div class="col-12" formArrayName="questions">
+    <app-row-question
+      *ngFor="let questionControls of questionsFormControls; index as questionIndex"
+      [question]="questionControls.get('question')!.value"
+    >
+      <app-form-list-answer
+        class="d-flex gap-2"
+        [answersFormControl]="getQuestionAnswerForm(questionIndex)"
+        [parentId]="questionIndex"
+        [answers]="questions?.[questionIndex]?.answers || []"
+      ></app-form-list-answer>
+    </app-row-question>
+  </div>
+
+  <div class="col-12 d-flex justify-content-center">
+    <button
+      class="btn btn-primary btn-block w-50"
+      type="submit"
+      id="validateBtn"
+      [ngClass]="{ 'd-none': form.invalid || form.untouched  }"
+      [disabled]="form.invalid || form.disabled"
+    >
+      Validate
+    </button>
+  </div>
+</form>

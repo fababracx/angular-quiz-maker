@@ -5,6 +5,7 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { UiModule } from './ui/ui.module';
 
 // the second parameter 'fr' is optional
 registerLocaleData(localeFr, 'fr');
@@ -14,7 +15,7 @@ registerLocaleData(localeFr, 'fr');
  */
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, UiModule],
   exports: [],
   providers: [
     {

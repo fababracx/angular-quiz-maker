@@ -1,0 +1,34 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="input-group">
+    <!-- <select class="form-select" id="categorySelect" formControlName="category" aria-label="Selector for category">
+      <option value="" disabled>Select a category</option>
+      <option *ngFor="let category of categories$ | async; trackBy:trackByFnCategories" [value]="category.id">{{ category.name }}</option>
+    </select>
+
+    <select class="form-select" id="difficultySelect" formControlName="difficulty" aria-label="Selector for difficulty">
+      <option value="" disabled>Select difficulty</option>
+      <option *ngFor="let difficulty of difficulties$ | async; trackBy:trackByFnDifficulties" [value]="difficulty">
+        {{ difficulty | titlecase }}
+      </option>
+    </select> -->
+
+    <app-select
+      selectId="categorySelect"
+      selectLabel="Selector for category"
+      [options]="categories$ | async | categoriesToOptions"
+      formControlName="category"
+    >
+      <option value="" disabled>Select a category</option>
+    </app-select>
+    <app-select
+      selectId="difficultySelect"
+      selectLabel="Selector for difficulty"
+      [options]="difficulties$ | async | difficultiesToOptions"
+      formControlName="difficulty"
+    >
+      <option value="" disabled>Select difficulty</option>
+    </app-select>
+
+    <button class="btn btn-outline-primary" type="submit" id="createBtn" [disabled]="form.invalid || form.disabled">Create</button>
+  </div>
+</form>

@@ -1,0 +1,18 @@
+<app-default-page-tpl>
+  <app-page-title pageTitle="Results"></app-page-title>
+
+  <div class="col-12">
+    <app-list-question-result [questions]="questions$ | async"></app-list-question-result>
+  </div>
+
+  <div class="col-12">
+    <app-final-score class="d-flex justify-content-center" [score]="(score$ | async) || 0"></app-final-score>
+  </div>
+
+  <app-page-action
+    action="Create a new quiz"
+    btnId="createNewQuizBtn"
+    additionnalClasses="btn-secondary"
+    (clickToAction)="onClickToAction($event)"
+  ></app-page-action>
+</app-default-page-tpl>
